@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -g CMakeFiles/test_macro.dir/test/test_macro.cpp.o -o ../bin/test_macro  -Wl,-rpath,/usr/local/lib src/base/liblsylar.a -ldl /usr/local/lib/libyaml-cpp.so.0.8.0 -lpthread 

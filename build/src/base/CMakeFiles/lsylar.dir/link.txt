@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsylar.a CMakeFiles/lsylar.dir/config.cpp.o CMakeFiles/lsylar.dir/fd_manager.cc.o CMakeFiles/lsylar.dir/fiber.cpp.o CMakeFiles/lsylar.dir/hook.cpp.o CMakeFiles/lsylar.dir/iomanager.cc.o CMakeFiles/lsylar.dir/log.cpp.o CMakeFiles/lsylar.dir/main.cpp.o CMakeFiles/lsylar.dir/mutex.cpp.o CMakeFiles/lsylar.dir/scheduler.cc.o CMakeFiles/lsylar.dir/thread.cpp.o CMakeFiles/lsylar.dir/timer.cc.o CMakeFiles/lsylar.dir/util.cpp.o
+/usr/bin/ranlib liblsylar.a
