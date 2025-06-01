@@ -116,6 +116,68 @@ depend:
 	cd /home/gch/高性能服务器框架/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/http/CMakeFiles/lhttp.dir/rule:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/http/CMakeFiles/lhttp.dir/rule
+.PHONY : src/http/CMakeFiles/lhttp.dir/rule
+
+# Convenience name for target.
+lhttp: src/http/CMakeFiles/lhttp.dir/rule
+.PHONY : lhttp
+
+# fast build rule for target.
+lhttp/fast:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f src/http/CMakeFiles/lhttp.dir/build.make src/http/CMakeFiles/lhttp.dir/build
+.PHONY : lhttp/fast
+
+http.o: http.cc.o
+.PHONY : http.o
+
+# target to build an object file
+http.cc.o:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f src/http/CMakeFiles/lhttp.dir/build.make src/http/CMakeFiles/lhttp.dir/http.cc.o
+.PHONY : http.cc.o
+
+http.i: http.cc.i
+.PHONY : http.i
+
+# target to preprocess a source file
+http.cc.i:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f src/http/CMakeFiles/lhttp.dir/build.make src/http/CMakeFiles/lhttp.dir/http.cc.i
+.PHONY : http.cc.i
+
+http.s: http.cc.s
+.PHONY : http.s
+
+# target to generate assembly for a file
+http.cc.s:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f src/http/CMakeFiles/lhttp.dir/build.make src/http/CMakeFiles/lhttp.dir/http.cc.s
+.PHONY : http.cc.s
+
+http_parser_template.o: http_parser_template.c.o
+.PHONY : http_parser_template.o
+
+# target to build an object file
+http_parser_template.c.o:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f src/http/CMakeFiles/lhttp.dir/build.make src/http/CMakeFiles/lhttp.dir/http_parser_template.c.o
+.PHONY : http_parser_template.c.o
+
+http_parser_template.i: http_parser_template.c.i
+.PHONY : http_parser_template.i
+
+# target to preprocess a source file
+http_parser_template.c.i:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f src/http/CMakeFiles/lhttp.dir/build.make src/http/CMakeFiles/lhttp.dir/http_parser_template.c.i
+.PHONY : http_parser_template.c.i
+
+http_parser_template.s: http_parser_template.c.s
+.PHONY : http_parser_template.s
+
+# target to generate assembly for a file
+http_parser_template.c.s:
+	cd /home/gch/高性能服务器框架/build && $(MAKE) $(MAKESILENT) -f src/http/CMakeFiles/lhttp.dir/build.make src/http/CMakeFiles/lhttp.dir/http_parser_template.c.s
+.PHONY : http_parser_template.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +186,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... lhttp"
+	@echo "... http.o"
+	@echo "... http.i"
+	@echo "... http.s"
+	@echo "... http_parser_template.o"
+	@echo "... http_parser_template.i"
+	@echo "... http_parser_template.s"
 .PHONY : help
 
 

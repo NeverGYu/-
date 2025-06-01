@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "../../bin/sylar"
   "../../bin/sylar.pdb"
-  "CMakeFiles/sylar.dir/main.cpp.o"
-  "CMakeFiles/sylar.dir/main.cpp.o.d"
+  "CMakeFiles/sylar.dir/base/main.cpp.o"
+  "CMakeFiles/sylar.dir/base/main.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

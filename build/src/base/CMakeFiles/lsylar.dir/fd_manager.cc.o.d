@@ -203,10 +203,26 @@ src/base/CMakeFiles/lsylar.dir/fd_manager.cc.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/gch/高性能服务器框架/include/base/mutex.h \
- /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /home/gch/高性能服务器框架/include/base/thread.h \
  /home/gch/高性能服务器框架/include/base/noncopyable.h \
- /usr/include/c++/11/atomic \
+ /home/gch/高性能服务器框架/include/base/mutex.h \
+ /usr/include/c++/11/thread /usr/include/c++/11/stop_token \
+ /usr/include/c++/11/atomic /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/semaphore /usr/include/c++/11/bits/semaphore_base.h \
+ /usr/include/c++/11/bits/atomic_timed_wait.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
+ /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/unordered_map.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/list \
+ /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
  /home/gch/高性能服务器框架/include/base/singleton.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \

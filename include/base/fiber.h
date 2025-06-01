@@ -1,9 +1,8 @@
 #pragma once
 
-#include <ucontext.h>
-#include <string>
 #include <functional>
 #include <memory>
+#include <ucontext.h>
 #include "thread.h"
 
 namespace sylar

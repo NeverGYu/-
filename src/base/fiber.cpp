@@ -9,7 +9,7 @@
 namespace sylar
 {
 
-static Logger::ptr g_logger = SYLAR_LOG_ROOT(); 
+static Logger::ptr g_logger = SYLAR_LOG_NAME("system"); 
 
 // 全局静态变量，用于生成协程id
 static std::atomic<uint64_t> s_fiber_id{0};

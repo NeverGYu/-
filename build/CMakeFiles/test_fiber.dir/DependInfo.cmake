@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gch/高性能服务器框架/test/test_fiber.cpp" "CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o" "gcc" "CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o.d"
+  "/home/gch/sylar/test/test_fiber.cpp" "CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o" "gcc" "CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gch/高性能服务器框架/build/src/base/CMakeFiles/lsylar.dir/DependInfo.cmake"
+  "/home/gch/sylar/build/src/CMakeFiles/lsylar.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

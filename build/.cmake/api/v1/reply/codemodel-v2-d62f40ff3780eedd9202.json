@@ -1,0 +1,250 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "sylar",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "lsylar::@145eef247bfb46b6828c",
+					"jsonFile" : "target-lsylar-Debug-c8201b8d32d5c2942969.json",
+					"name" : "lsylar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_address::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_address-Debug-e952682baf0675e15d55.json",
+					"name" : "test_address",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_bytearray::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_bytearray-Debug-844859f1c2fc71fb7534.json",
+					"name" : "test_bytearray",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_config::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_config-Debug-6aceefdd1fa7a4d43bb9.json",
+					"name" : "test_config",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_fiber::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_fiber-Debug-b85f47a6b9bc6ae3c8b6.json",
+					"name" : "test_fiber",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_hook::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_hook-Debug-094db170c2e8d84f5513.json",
+					"name" : "test_hook",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_http::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_http-Debug-bcf139b421ba6015be5c.json",
+					"name" : "test_http",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_http_connection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_http_connection-Debug-1cc58a827570abb41075.json",
+					"name" : "test_http_connection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_http_parser::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_http_parser-Debug-8647017a5b8d30bc0295.json",
+					"name" : "test_http_parser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_http_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_http_server-Debug-6064c4b9d1e7a8c285fd.json",
+					"name" : "test_http_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_iomanager::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_iomanager-Debug-0c54d6bf1c863b9683cd.json",
+					"name" : "test_iomanager",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_log::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_log-Debug-546473630cfe3b1fa4e0.json",
+					"name" : "test_log",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_macro::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_macro-Debug-9d8d58486e1de359dd09.json",
+					"name" : "test_macro",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_schedule::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_schedule-Debug-3271e8bbfc3ea0bb2902.json",
+					"name" : "test_schedule",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_socket::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_socket-Debug-471ffeb234fc5326fdd4.json",
+					"name" : "test_socket",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_socket_tcp_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_socket_tcp_client-Debug-133656d603ae67b4729c.json",
+					"name" : "test_socket_tcp_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_socket_tcp_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_socket_tcp_server-Debug-fc9dfe76d674df2be2d7.json",
+					"name" : "test_socket_tcp_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_tcp_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_tcp_server-Debug-a85b10f33ef353269190.json",
+					"name" : "test_tcp_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_thread::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_thread-Debug-ae613a0456a94e3a6c9d.json",
+					"name" : "test_thread",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_timer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_timer-Debug-14989c4772d2a30015bd.json",
+					"name" : "test_timer",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/gch/sylar/build",
+		"source" : "/home/gch/sylar"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

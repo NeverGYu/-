@@ -23,7 +23,6 @@ static thread_local bool t_hook_enable = false;
 
 static uint64_t s_connect_timeout = -1;
 
-
 static sylar::ConfigVar<int>::ptr g_tcp_connect_timeout = 
     sylar::Config::Lookup("tcp.connect.timeout", "tcp connect timeout", 5000);
 
@@ -160,7 +159,6 @@ static ssize_t do_io(int fd, OriginFun fun, const char* hook_fun_name, uint32_t 
     uint64_t to = ctx->getTimeout(timeout_so);
     // 构建一个 timer_info（协程阻塞等待的超时信息）用于后续协程恢复判断
     std::shared_ptr<timer_info> tinfo(new timer_info);
-
 retry:
     // 尝试执行系统调用函数
     ssize_t n = fun(fd, std::forward<Args>(args)...);
@@ -178,7 +176,7 @@ retry:
         sylar::Timer::ptr timer;
         std::weak_ptr<timer_info> winfo(tinfo);
         // 判断是否需要设置超时计时器
-        if (to != static_cast<uint64_t>(-1))
+        if (to != (uint64_t)-1)
         {
             // 给IO协程调度器添加一个条件定时器
             timer = iom->addTimerCondition(to, false,[winfo, fd, iom, event](){
@@ -194,7 +192,7 @@ retry:
         // 将 fd 对应的事件 event 添加到 epoll 内核事件表
         int rt = iom->addEvent(fd, static_cast<sylar::IOManager::Event>(event));
         // 这表示往epoll添加事件失败
-        if (rt)
+        if (SYLAR_UNLIKELY(rt))
         {
             SYLAR_LOG_ERROR(g_logger) << hook_fun_name << " addEvent("
                                       << fd << ", " << event << ")";
@@ -221,6 +219,8 @@ retry:
             goto retry;            
         } 
     }
+    
+    
     return n;
 }
 

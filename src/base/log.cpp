@@ -641,8 +641,6 @@ Logger::ptr LoggerManager::getLogger(const std::string& name)
     {
         return it->second;
     }
-
-    std::cout << "log" << std::endl;
     Logger::ptr logger(new Logger(name));
     logger->addAppender(LogAppender::ptr(new StdoutLogAppender));
     m_loggers[name] = logger;

@@ -1,15 +1,17 @@
 #pragma once
+
 #include <string>
-#include <sstream>
 #include <memory>
-#include <list>
-#include <vector>
+#include <iostream>
+#include <sstream>
 #include <fstream>
+#include <vector>
+#include <cstdarg>
+#include <list>
 #include <map>
-#include "singleton.h"
 #include "util.h"
 #include "mutex.h"
-
+#include "singleton.h"
  
 namespace sylar
 {

@@ -1,9 +1,7 @@
 # pragma once
 
 #include "scheduler.h"
-#include "mutex.h"
 #include "timer.h"
-#include <functional>
 
 namespace sylar
 {
@@ -151,11 +149,12 @@ protected:
     void contextResize(size_t size);
 
 private:
-    int m_epfd;                                     // 内核事件表
+    int m_epfd = 0;                                     // 内核事件表
     int m_tickleFds[2];                             // 管道通信--> 用于通知陷入epoll_wait的线程 --> [0]读端，[1]写端
     std::atomic<size_t> m_pendingEventCount = {0};  // 当前等待执行的IO事件数量
     RWMutexType m_mutex;                            // 读写锁
     std::vector<FdContext*> m_fdcontexts;           // 句柄数组（保存封装好的句柄）
 };
+
 
 }

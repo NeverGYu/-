@@ -19,14 +19,8 @@ namespace sylar
      */
     void set_hook_enable(bool flag);
 
+}
 
-
-
-
-
-
-
-/*  <-------------------------------------------------------------------->*/
 
 
 /**
@@ -42,11 +36,6 @@ namespace sylar
                 3、常用于 C++ 中的头文件：
                    如果在 C++ 的头文件中，定义了一些 C 函数的声明，并且这些函数可能会在 C 代码中使用，可以将这些声明包裹在 extern "C" {} 中，以便 C 代码链接时使用 C 的方式。
  */
-
-
-}
-
-
 extern "C"
 {
 
@@ -129,4 +118,5 @@ using setsockopt_fun = int (*)(int sockfd, int level,  int optname, const void* 
 extern setsockopt_fun setsockopt_f;
 
 extern int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms);
+
 }

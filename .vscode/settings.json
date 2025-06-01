@@ -80,6 +80,12 @@
         "any": "cpp",
         "set": "cpp",
         "unordered_set": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "bitset": "cpp",
+        "*.ipp": "cpp",
+        "codecvt": "cpp",
+        "csignal": "cpp",
+        "cfenv": "cpp",
+        "charconv": "cpp"
     }
 }

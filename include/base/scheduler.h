@@ -1,13 +1,12 @@
 #pragma once
 
+#include <functional>
+#include <list>
 #include <memory>
 #include <string>
-#include <vector>
-#include <list>
-#include <atomic>
-#include "mutex.h"
-#include "thread.h"
 #include "fiber.h"
+#include "log.h"
+#include "thread.h"
 
 namespace sylar
 {
@@ -70,7 +69,7 @@ public:
 
         if (need_tickle)    // 这说明现在任务队列中有任务，需要唤醒idle协程
         {
-            tickle();
+            tickle();       // 唤醒idle协程
         }
         
     }
@@ -114,7 +113,7 @@ protected:
     /**
      *  @brief 返回是否有空闲线程 
      */
-    bool hasIdleThreads() const { return m_threadCount > 0; }
+    bool hasIdleThreads() { return m_threadCount > 0; }
 
 private:
 
@@ -129,7 +128,6 @@ private:
         if (task.fiber || task.cb)
         {
             m_tasks.push_back(task);
-            need_tickle = true;
         } 
         return need_tickle;     
     }
@@ -177,6 +175,7 @@ private:
             cb = nullptr;
             threadid = -1;
         }
+        
     private:
         Fiber::ptr fiber;
         std::function<void()> cb;

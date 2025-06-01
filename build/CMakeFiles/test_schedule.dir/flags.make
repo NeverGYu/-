@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gch/高性能服务器框架/include/base
+CXX_INCLUDES = -I/home/gch/sylar/include/base -I/home/gch/sylar/include/http/http-parser -I/home/gch/sylar/include/http/base -I/home/gch/sylar/include/stream
 
-CXX_FLAGS = -g -g -fPIE -std=gnu++20
+CXX_FLAGS =  -g -rdynamic -fPIC -g -fPIE -std=gnu++20
 

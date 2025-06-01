@@ -3,15 +3,17 @@
 #include <memory>
 #include <string>
 #include <sstream>
-#include <iostream>
 #include <boost/lexical_cast.hpp>
-#include <functional>
 #include <yaml-cpp/yaml.h>
 #include <vector>
 #include <list>
+#include <map>
 #include <set>
-#include <unordered_set>
 #include <unordered_map>
+#include <unordered_set>
+#include <functional>
+
+#include "mutex.h"
 #include "log.h"
 #include "util.h"
 

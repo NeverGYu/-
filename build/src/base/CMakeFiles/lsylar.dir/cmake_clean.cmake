@@ -1,4 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lsylar.dir/__/http/http.cc.o"
+  "CMakeFiles/lsylar.dir/__/http/http.cc.o.d"
+  "CMakeFiles/lsylar.dir/__/http/http_parser_template.c.o"
+  "CMakeFiles/lsylar.dir/__/http/http_parser_template.c.o.d"
+  "CMakeFiles/lsylar.dir/address.cpp.o"
+  "CMakeFiles/lsylar.dir/address.cpp.o.d"
+  "CMakeFiles/lsylar.dir/bytearray.cpp.o"
+  "CMakeFiles/lsylar.dir/bytearray.cpp.o.d"
   "CMakeFiles/lsylar.dir/config.cpp.o"
   "CMakeFiles/lsylar.dir/config.cpp.o.d"
   "CMakeFiles/lsylar.dir/fd_manager.cc.o"
@@ -17,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lsylar.dir/mutex.cpp.o.d"
   "CMakeFiles/lsylar.dir/scheduler.cc.o"
   "CMakeFiles/lsylar.dir/scheduler.cc.o.d"
+  "CMakeFiles/lsylar.dir/socket.cpp.o"
+  "CMakeFiles/lsylar.dir/socket.cpp.o.d"
   "CMakeFiles/lsylar.dir/thread.cpp.o"
   "CMakeFiles/lsylar.dir/thread.cpp.o.d"
   "CMakeFiles/lsylar.dir/timer.cc.o"
@@ -28,6 +38,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang C CXX)
   include(CMakeFiles/lsylar.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

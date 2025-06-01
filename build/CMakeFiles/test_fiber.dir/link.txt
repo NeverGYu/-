@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -g CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o -o ../bin/test_fiber  -Wl,-rpath,/usr/local/lib src/base/liblsylar.a -ldl /usr/local/lib/libyaml-cpp.so.0.8.0 -lpthread 
+/usr/bin/g++  -g -rdynamic -fPIC -g CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o -o ../bin/test_fiber  -Wl,-rpath,/usr/local/lib src/liblsylar.a -ldl /usr/local/lib/libyaml-cpp.so.0.8.0 -lpthread 

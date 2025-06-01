@@ -1,10 +1,14 @@
 #pragma once
 
+#include <thread>
+#include <functional>
+#include <memory>
 #include <pthread.h>
 #include <semaphore.h>
-#include "noncopyable.h"
-#include <stdint.h>
+#include <cstdint>
 #include <atomic>
+#include <list>
+#include "noncopyable.h"
 
 namespace sylar
 {

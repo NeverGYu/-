@@ -12,8 +12,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "../src/CMakeLists.txt"
-  "../src/base/CMakeLists.txt"
-  "../src/http/CMakeLists.txt"
   "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake"
   "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-config.cmake"
   "/usr/local/lib/cmake/yaml-cpp/yaml-cpp-targets-noconfig.cmake"
@@ -47,21 +45,28 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/base/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/http/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/test_address.dir/DependInfo.cmake"
+  "CMakeFiles/test_bytearray.dir/DependInfo.cmake"
   "CMakeFiles/test_config.dir/DependInfo.cmake"
   "CMakeFiles/test_fiber.dir/DependInfo.cmake"
   "CMakeFiles/test_hook.dir/DependInfo.cmake"
+  "CMakeFiles/test_http.dir/DependInfo.cmake"
+  "CMakeFiles/test_http_connection.dir/DependInfo.cmake"
+  "CMakeFiles/test_http_parser.dir/DependInfo.cmake"
+  "CMakeFiles/test_http_server.dir/DependInfo.cmake"
   "CMakeFiles/test_iomanager.dir/DependInfo.cmake"
   "CMakeFiles/test_log.dir/DependInfo.cmake"
   "CMakeFiles/test_macro.dir/DependInfo.cmake"
   "CMakeFiles/test_schedule.dir/DependInfo.cmake"
+  "CMakeFiles/test_socket.dir/DependInfo.cmake"
+  "CMakeFiles/test_socket_tcp_client.dir/DependInfo.cmake"
+  "CMakeFiles/test_socket_tcp_server.dir/DependInfo.cmake"
+  "CMakeFiles/test_tcp_server.dir/DependInfo.cmake"
   "CMakeFiles/test_thread.dir/DependInfo.cmake"
   "CMakeFiles/test_timer.dir/DependInfo.cmake"
-  "src/base/CMakeFiles/lsylar.dir/DependInfo.cmake"
-  "src/base/CMakeFiles/sylar.dir/DependInfo.cmake"
+  "src/CMakeFiles/lsylar.dir/DependInfo.cmake"
   )

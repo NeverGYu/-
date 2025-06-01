@@ -1,11 +1,10 @@
 #pragma once
 
-#include "mutex.h"
 
 #include <memory>
-#include <functional>
-#include <set>
 #include <vector>
+#include <set>
+#include "mutex.h"
 
 namespace sylar
 {

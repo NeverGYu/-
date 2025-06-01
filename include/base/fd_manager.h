@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 #include <vector>
-#include "mutex.h"
+#include "thread.h"
 #include "singleton.h"
 
 namespace sylar

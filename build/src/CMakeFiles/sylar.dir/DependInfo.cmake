@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gch/高性能服务器框架/src/main.cpp" "src/CMakeFiles/sylar.dir/main.cpp.o" "gcc" "src/CMakeFiles/sylar.dir/main.cpp.o.d"
+  "/home/gch/高性能服务器框架/src/base/main.cpp" "src/CMakeFiles/sylar.dir/base/main.cpp.o" "gcc" "src/CMakeFiles/sylar.dir/base/main.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gch/高性能服务器框架/include/base
+CXX_INCLUDES = -I/home/gch/高性能服务器框架/include/base -I/home/gch/高性能服务器框架/include/http
 
-CXX_FLAGS = -g -g -fPIE -std=gnu++20
+CXX_FLAGS =  -g -rdynamic -fPIC -g -fPIE -std=gnu++20
 
