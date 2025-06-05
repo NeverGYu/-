@@ -212,7 +212,10 @@ std::ostream& HttpRequest::dump(std::ostream& os) const
        os << "Content-length: " << m_body.size() << "\r\n\r\n"
           << m_body;
     }
-
+    else 
+    {
+        os << "\r\n";
+    }
     return os;
 }
 

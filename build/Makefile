@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named my_http_server
+
+# Build rule for target.
+my_http_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_http_server
+.PHONY : my_http_server
+
+# fast build rule for target.
+my_http_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/build
+.PHONY : my_http_server/fast
+
+#=============================================================================
 # Target rules for targets named test_address
 
 # Build rule for target.
@@ -154,6 +167,32 @@ test_config: cmake_check_build_system
 test_config/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
 .PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named test_daemon
+
+# Build rule for target.
+test_daemon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_daemon
+.PHONY : test_daemon
+
+# fast build rule for target.
+test_daemon/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/build
+.PHONY : test_daemon/fast
+
+#=============================================================================
+# Target rules for targets named test_env
+
+# Build rule for target.
+test_env: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_env
+.PHONY : test_env
+
+# fast build rule for target.
+test_env/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/build
+.PHONY : test_env/fast
 
 #=============================================================================
 # Target rules for targets named test_fiber
@@ -376,6 +415,30 @@ lsylar/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/build
 .PHONY : lsylar/fast
 
+test/my_http_server.o: test/my_http_server.cpp.o
+.PHONY : test/my_http_server.o
+
+# target to build an object file
+test/my_http_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/test/my_http_server.cpp.o
+.PHONY : test/my_http_server.cpp.o
+
+test/my_http_server.i: test/my_http_server.cpp.i
+.PHONY : test/my_http_server.i
+
+# target to preprocess a source file
+test/my_http_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/test/my_http_server.cpp.i
+.PHONY : test/my_http_server.cpp.i
+
+test/my_http_server.s: test/my_http_server.cpp.s
+.PHONY : test/my_http_server.s
+
+# target to generate assembly for a file
+test/my_http_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/test/my_http_server.cpp.s
+.PHONY : test/my_http_server.cpp.s
+
 test/test_address.o: test/test_address.cpp.o
 .PHONY : test/test_address.o
 
@@ -447,6 +510,54 @@ test/test_config.s: test/test_config.cpp.s
 test/test_config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/test/test_config.cpp.s
 .PHONY : test/test_config.cpp.s
+
+test/test_daemon.o: test/test_daemon.cpp.o
+.PHONY : test/test_daemon.o
+
+# target to build an object file
+test/test_daemon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/test/test_daemon.cpp.o
+.PHONY : test/test_daemon.cpp.o
+
+test/test_daemon.i: test/test_daemon.cpp.i
+.PHONY : test/test_daemon.i
+
+# target to preprocess a source file
+test/test_daemon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/test/test_daemon.cpp.i
+.PHONY : test/test_daemon.cpp.i
+
+test/test_daemon.s: test/test_daemon.cpp.s
+.PHONY : test/test_daemon.s
+
+# target to generate assembly for a file
+test/test_daemon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/test/test_daemon.cpp.s
+.PHONY : test/test_daemon.cpp.s
+
+test/test_env.o: test/test_env.cpp.o
+.PHONY : test/test_env.o
+
+# target to build an object file
+test/test_env.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/test/test_env.cpp.o
+.PHONY : test/test_env.cpp.o
+
+test/test_env.i: test/test_env.cpp.i
+.PHONY : test/test_env.i
+
+# target to preprocess a source file
+test/test_env.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/test/test_env.cpp.i
+.PHONY : test/test_env.cpp.i
+
+test/test_env.s: test/test_env.cpp.s
+.PHONY : test/test_env.s
+
+# target to generate assembly for a file
+test/test_env.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/test/test_env.cpp.s
+.PHONY : test/test_env.cpp.s
 
 test/test_fiber.o: test/test_fiber.cpp.o
 .PHONY : test/test_fiber.o
@@ -841,9 +952,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lsylar"
+	@echo "... my_http_server"
 	@echo "... test_address"
 	@echo "... test_bytearray"
 	@echo "... test_config"
+	@echo "... test_daemon"
+	@echo "... test_env"
 	@echo "... test_fiber"
 	@echo "... test_hook"
 	@echo "... test_http"
@@ -860,6 +974,9 @@ help:
 	@echo "... test_tcp_server"
 	@echo "... test_thread"
 	@echo "... test_timer"
+	@echo "... test/my_http_server.o"
+	@echo "... test/my_http_server.i"
+	@echo "... test/my_http_server.s"
 	@echo "... test/test_address.o"
 	@echo "... test/test_address.i"
 	@echo "... test/test_address.s"
@@ -869,6 +986,12 @@ help:
 	@echo "... test/test_config.o"
 	@echo "... test/test_config.i"
 	@echo "... test/test_config.s"
+	@echo "... test/test_daemon.o"
+	@echo "... test/test_daemon.i"
+	@echo "... test/test_daemon.s"
+	@echo "... test/test_env.o"
+	@echo "... test/test_env.i"
+	@echo "... test/test_env.s"
 	@echo "... test/test_fiber.o"
 	@echo "... test/test_fiber.i"
 	@echo "... test/test_fiber.s"

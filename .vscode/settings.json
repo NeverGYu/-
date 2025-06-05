@@ -86,6 +86,7 @@
         "codecvt": "cpp",
         "csignal": "cpp",
         "cfenv": "cpp",
-        "charconv": "cpp"
+        "charconv": "cpp",
+        "filesystem": "cpp"
     }
 }

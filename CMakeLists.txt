@@ -11,6 +11,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -rdynamic -fPIC")
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 # 配置最终的可执行文件输出的路径
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+# 设置库文件输出路径
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 # 查找 yaml-cpp 库
 find_package(yaml-cpp REQUIRED)
 # 加载子目录

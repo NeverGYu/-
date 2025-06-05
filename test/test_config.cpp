@@ -1,4 +1,5 @@
 #include "config.h"
+#include "env.h"
 #include <iostream>
 #include <vector>
 #include <list>
@@ -9,22 +10,19 @@
 
 /*-------------获得一个日志器----------------*/
 
-sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
 
 /*-------------------  获得各种类型的配置参数 ---------------------*/
 
 sylar::ConfigVar<int>::ptr g_int = 
     sylar::Config::Lookup("system.port", "system port",(int)8080);
 
-sylar::ConfigVar<float>::ptr g_intx = 
-    sylar::Config::Lookup("system.port", "system port",(float)8080);
 
 sylar::ConfigVar<float>::ptr g_float  = 
     sylar::Config::Lookup("system.value", "system value", (float)10.2f);
 
 sylar::ConfigVar<std::vector<int>>::ptr g_int_vector_value_config = 
     sylar::Config::Lookup("system.int_vec","system int vec", std::vector<int>{1,2});
-
 
 sylar::ConfigVar<std::list<int>>::ptr g_int_list_value_config = 
     sylar::Config::Lookup("system.int_list","system int list", std::list<int>{1,2});
@@ -40,6 +38,7 @@ sylar::ConfigVar<std::map<std::string, int>>::ptr g_string_int_map_value_config 
 
 sylar::ConfigVar<std::unordered_map<std::string, int>>::ptr g_string_int_umap_value_config = 
     sylar::Config::Lookup("system.string_int_umap","system string int umap", std::unordered_map<std::string, int>{{"th",2}});
+
 
 /*-------------------  测试是否可以打印一个YAML::Node ---------------------*/
 void print_yaml(const YAML::Node& node, int level)
@@ -145,6 +144,7 @@ void test_config()
     }
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before string_int_umap YAML: " << g_string_int_umap_value_config->toString();
     
+
     /*--------- 获得配置文件并修改对应参数 -------------------------------*/
     YAML::Node root = YAML::LoadFile("/home/gch/高性能服务器框架/conf/testConfig");
     sylar::Config::LoadFromYaml(root);
@@ -344,9 +344,13 @@ void test_log()
     std::cout << root << std::endl;
 }
 
+void test_loadconf()
+{
+    sylar::Config::LoadFromConfDir("conf");
+}
 
 /*-------------------  执行打印 ---------------------*/
-int main()
+int main(int argc, char** argv)
 {
     // test_yaml();
 
@@ -354,7 +358,21 @@ int main()
 
     // test_class();
 
-    test_log();
+    // test_log();
+
+    sylar::EnvMgr::GetInstance()->init(argc, argv);
+    test_loadconf();
+    std::cout << " ==== " << std::endl;
+    // sleep(10);
+    // test_loadconf();
+    g_logger->setLoggerLevel(sylar::LogLevel::DEBUG);
+    sylar::Config::Visit([](sylar::ConfigVarBase::ptr var) {
+        std::cout << "name=" << var->getName()
+                    << " description=" << var->getDescription()
+                    << " typename=" << var->getTypeName()
+                    << " value=" << var->toString()
+                    << std::endl; 
+    });
 
     return 0;
 }

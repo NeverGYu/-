@@ -18,3 +18,11 @@ target_link_libraries(lsylar PUBLIC
     yaml-cpp::yaml-cpp 
     pthread)     
 
+# 生成动态库
+#add_library(sylar SHARED ${BASE_SRC} ${HTTP_SRC} ${STREAM_SRC})
+#target_include_directories(sylar PUBLIC 
+#            ${CMAKE_SOURCE_DIR}/include/base
+ #           ${CMAKE_SOURCE_DIR}/include/http/http-parser
+  #          ${CMAKE_SOURCE_DIR}/include/http/base
+   #         ${CMAKE_SOURCE_DIR}/include/stream)
+            

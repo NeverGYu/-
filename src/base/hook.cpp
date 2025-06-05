@@ -245,7 +245,6 @@ unsigned int sleep(unsigned int seconds)
     // 判断当前线程是否被hook
     if (!sylar::t_hook_enable)
     {
-        SYLAR_LOG_DEBUG(SYLAR_LOG_ROOT()) << "hook not enabled, using sleep_f";
         return sleep_f(seconds);
     }
     // 这说明当前线程被hook

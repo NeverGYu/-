@@ -17,8 +17,8 @@ void test_pool()
 
 void run()
 {
-    sylar::Address::ptr addr = sylar::Address::LookupAnyIPAddress("www.baidu.com:80");
-    SYLAR_LOG_DEBUG(g_logger) << addr->getAddr();
+    sylar::Address::ptr addr = sylar::Address::LookupAny("www.baidu.com:80");
+    SYLAR_LOG_DEBUG(g_logger) << addr->toString();
     if (!addr)
     {
         SYLAR_LOG_INFO(g_logger) << "get addr error";
@@ -38,7 +38,7 @@ void run()
     sylar::http::HttpConnection::ptr conn(new sylar::http::HttpConnection(sock));
     sylar::http::HttpRequest::ptr req(new sylar::http::HttpRequest);
     req->setPath("/");
-    req->setHeader("host", "httpbin.org");
+    req->setHeader("host", "www.baidu.com");
     req->setHeader("connection", "keep-alive");
     req->init();
     std::cout << "req:" << std::endl

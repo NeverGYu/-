@@ -17,6 +17,8 @@
 #include "bytearray.hpp"
 #include "tcp_server.h"
 #include "timer.h"
+#include "env.h"
+#include "daemon.h"
 #include "../stream/socket_stream.hpp"
 #include "../http/base/http.h"
 #include "../http/http-parser/http_parser_template.h"

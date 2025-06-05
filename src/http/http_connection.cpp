@@ -72,6 +72,7 @@ int HttpConnection::sendRequest(HttpRequest::ptr req)
     std::stringstream ss;
     ss << *req;
     std::string data = ss.str();
+    std::cout << "data: " << '\n' << data << std::endl;
     return writeFixSize(data.c_str(), data.size());
 }
 

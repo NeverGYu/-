@@ -425,6 +425,7 @@ CMakeFiles/test_socket.dir/test/test_socket.cpp.o: \
  /home/gch/sylar/include/base/socket.hpp \
  /home/gch/sylar/include/base/bytearray.hpp \
  /home/gch/sylar/include/base/tcp_server.h \
+ /home/gch/sylar/include/base/env.h /home/gch/sylar/include/base/daemon.h \
  /home/gch/sylar/include/base/../stream/socket_stream.hpp \
  /home/gch/sylar/include/base/../stream/../base/stream.hpp \
  /home/gch/sylar/include/base/../http/base/http.h \

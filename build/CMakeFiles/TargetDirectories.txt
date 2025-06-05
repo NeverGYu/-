@@ -1,6 +1,9 @@
+/home/gch/sylar/build/CMakeFiles/my_http_server.dir
 /home/gch/sylar/build/CMakeFiles/test_address.dir
 /home/gch/sylar/build/CMakeFiles/test_bytearray.dir
 /home/gch/sylar/build/CMakeFiles/test_config.dir
+/home/gch/sylar/build/CMakeFiles/test_daemon.dir
+/home/gch/sylar/build/CMakeFiles/test_env.dir
 /home/gch/sylar/build/CMakeFiles/test_fiber.dir
 /home/gch/sylar/build/CMakeFiles/test_hook.dir
 /home/gch/sylar/build/CMakeFiles/test_http.dir

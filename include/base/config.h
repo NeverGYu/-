@@ -475,6 +475,7 @@ class Config
 public:
     using ConfigVarMap = std::unordered_map<std::string, ConfigVarBase::ptr>;
 
+    using RWMutexType = RWMutex ;
     /**
      * @brief 寻找是否有对应名称的参数 
      * @details 如果没有就创建配置参数
@@ -527,9 +528,27 @@ public:
         
     }
 
+    /**
+     * @brief 使用YAML::Node初始化配置模块
+     */
     static void LoadFromYaml(const YAML::Node& node);
 
+    /**
+     * @brief 加载path文件夹里面的配置文件
+     */
+    static void LoadFromConfDir(const std::string& path, bool force = false);
+
+    /**
+     * @brief 查找配置参数,返回配置参数的基类
+     * @param[in] name 配置参数名称
+     */
     static ConfigVarBase::ptr LookupBase(const std::string& name);
+
+    /**
+     * @brief 遍历配置模块里面所有配置项
+     * @param[in] cb 配置项回调函数
+     */
+    static void Visit(std::function<void(ConfigVarBase::ptr)> cb);
 
 private:
     /**
@@ -539,6 +558,14 @@ private:
     {
         static ConfigVarMap s_datas;
         return s_datas;
+    }
+
+    /**
+     * @brief 配置项的RWMutex
+     */
+    static RWMutexType& GetMutex() {
+        static RWMutexType s_mutex;
+        return s_mutex;
     }
 };
 

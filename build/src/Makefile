@@ -202,6 +202,54 @@ base/config.cpp.s:
 	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/config.cpp.s
 .PHONY : base/config.cpp.s
 
+base/daemon.o: base/daemon.cpp.o
+.PHONY : base/daemon.o
+
+# target to build an object file
+base/daemon.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/daemon.cpp.o
+.PHONY : base/daemon.cpp.o
+
+base/daemon.i: base/daemon.cpp.i
+.PHONY : base/daemon.i
+
+# target to preprocess a source file
+base/daemon.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/daemon.cpp.i
+.PHONY : base/daemon.cpp.i
+
+base/daemon.s: base/daemon.cpp.s
+.PHONY : base/daemon.s
+
+# target to generate assembly for a file
+base/daemon.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/daemon.cpp.s
+.PHONY : base/daemon.cpp.s
+
+base/env.o: base/env.cpp.o
+.PHONY : base/env.o
+
+# target to build an object file
+base/env.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/env.cpp.o
+.PHONY : base/env.cpp.o
+
+base/env.i: base/env.cpp.i
+.PHONY : base/env.i
+
+# target to preprocess a source file
+base/env.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/env.cpp.i
+.PHONY : base/env.cpp.i
+
+base/env.s: base/env.cpp.s
+.PHONY : base/env.s
+
+# target to generate assembly for a file
+base/env.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/env.cpp.s
+.PHONY : base/env.cpp.s
+
 base/fd_manager.o: base/fd_manager.cpp.o
 .PHONY : base/fd_manager.o
 
@@ -772,6 +820,12 @@ help:
 	@echo "... base/config.o"
 	@echo "... base/config.i"
 	@echo "... base/config.s"
+	@echo "... base/daemon.o"
+	@echo "... base/daemon.i"
+	@echo "... base/daemon.s"
+	@echo "... base/env.o"
+	@echo "... base/env.i"
+	@echo "... base/env.s"
 	@echo "... base/fd_manager.o"
 	@echo "... base/fd_manager.i"
 	@echo "... base/fd_manager.s"
