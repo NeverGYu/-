@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_schedule"
-  "../bin/test_schedule.pdb"
+  "../bin/exe/test_schedule"
+  "../bin/exe/test_schedule.pdb"
   "CMakeFiles/test_schedule.dir/test/test_schedule.cpp.o"
   "CMakeFiles/test_schedule.dir/test/test_schedule.cpp.o.d"
 )

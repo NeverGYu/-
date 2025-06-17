@@ -11,3 +11,18 @@ logs:
         pattern: "%d{%Y-%m-%d %H:%M:%S} %T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
       - type: FileLogAppender
         file: /home/gch/高性能服务器框架/bin/system.txt
+
+cors:
+    allowedOrigins:
+      - "http://192.169.100.130:8020"
+    allowedMethods:
+      - "GET"
+      - "POST"
+      - "PUT"
+      - "DELETE"
+      - "OPTIONS"
+    allowedHeaders:
+      - "Authorization"
+      - "Content-Type"
+    allowCredentials: true
+    maxAge: 600

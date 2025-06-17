@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_http"
-  "../bin/test_http.pdb"
+  "../bin/exe/test_http"
+  "../bin/exe/test_http.pdb"
   "CMakeFiles/test_http.dir/test/test_http.cpp.o"
   "CMakeFiles/test_http.dir/test/test_http.cpp.o.d"
 )

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_bytearray"
-  "../bin/test_bytearray.pdb"
+  "../bin/exe/test_bytearray"
+  "../bin/exe/test_bytearray.pdb"
   "CMakeFiles/test_bytearray.dir/test/test_bytearray.cpp.o"
   "CMakeFiles/test_bytearray.dir/test/test_bytearray.cpp.o.d"
 )

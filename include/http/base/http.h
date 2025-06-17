@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../http-parser/http_parser_template.h"
+
 #include <string>
 #include <memory>
 #include <vector>
@@ -127,6 +128,8 @@ T getAs(MapType m, const std::string& key, T& def = T())
 
 class HttpResponse;
 
+class Session;
+
 class HttpRequest
 {
 public:
@@ -227,6 +230,17 @@ public:
      *  @param[in] v 追加内容 
      */
     void appendBody(const std::string& v) { m_body.append(v); }
+
+    /**
+     *  @brief 添加会话
+     *  @param[in] session 
+     */
+    void setSession(std::shared_ptr<Session> session) { m_session = session; }
+
+    /**
+     *  @brief 获取会话 
+     */
+    std::shared_ptr<Session> getSession() const { return m_session; }
 
     /**
      *  @brief 是否自动关闭 
@@ -467,19 +481,20 @@ public:
     void init();
 
 private:
-    HttpMethod m_method;        // Http请求方法
-    uint8_t m_version;          // Http版本
-    bool m_close;               // 是否自动关闭
-    bool m_websocket;           // 是否为websocket
-    uint8_t m_parserParamFlag;  // 参数解析位--> 0:未解析， 1:已解析url参数，2:已解析http消息体的参数，4:已解析cookie
-    std::string m_url;          // 请求的完整url
-    std::string m_path;         // 请求路径
-    std::string m_query;        // 请求参数
-    std::string m_fragment;       // 请求fragemnt
-    std::string m_body;         // 请求消息体
-    MapType m_headers;          // 请求头部Map
-    MapType m_params;           // 请求参数Map
-    MapType m_cookies;           // 请求CookieMap
+    HttpMethod m_method;                    // Http请求方法
+    uint8_t m_version;                      // Http版本
+    bool m_close;                           // 是否自动关闭
+    bool m_websocket;                       // 是否为websocket
+    uint8_t m_parserParamFlag;              // 参数解析位--> 0:未解析， 1:已解析url参数，2:已解析http消息体的参数，4:已解析cookie
+    std::string m_url;                      // 请求的完整url
+    std::string m_path;                     // 请求路径
+    std::string m_query;                    // 请求参数
+    std::string m_fragment;                 // 请求fragemnt
+    std::string m_body;                     // 请求消息体
+    MapType m_headers;                      // 请求头部Map
+    MapType m_params;                       // 请求参数Map
+    MapType m_cookies;                      // 请求CookieMap
+    std::shared_ptr<Session> m_session;     // 会话
 };
 
 

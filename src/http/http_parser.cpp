@@ -89,7 +89,7 @@ static _HttpSizeIniter _init;
  */
 static int on_request_message_begin_cb(http_parser* p)
 {
-    SYLAR_LOG_INFO(g_logger) << "on_request_message_begin_cb";
+    // SYLAR_LOG_INFO(g_logger) << "on_request_message_begin_cb";
     return 0;
 }
     
@@ -99,7 +99,7 @@ static int on_request_message_begin_cb(http_parser* p)
  */
 static int on_request_headers_complete_cb(http_parser* p)
 {
-    SYLAR_LOG_DEBUG(g_logger) << "on_request_headers_complete_cb";
+    // SYLAR_LOG_DEBUG(g_logger) << "on_request_headers_complete_cb";
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(p->data);
     parser->getHttpRequest()->setVersion(((p->http_major) << 0x4 ) | (p->http_minor));
     parser->getHttpRequest()->setMethod((HttpMethod)(p->method));
@@ -111,7 +111,7 @@ static int on_request_headers_complete_cb(http_parser* p)
  */
 static int on_request_message_complete_cb(http_parser* p)
 {
-    SYLAR_LOG_DEBUG(g_logger) <<"on_request_message_complete_cb";
+    // SYLAR_LOG_DEBUG(g_logger) <<"on_request_message_complete_cb";
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(p->data);
     parser->setFinished(true);
     return 0;
@@ -122,7 +122,7 @@ static int on_request_message_complete_cb(http_parser* p)
  */
 static int on_request_chunk_header_cb(http_parser *p) 
 {
-    SYLAR_LOG_DEBUG(g_logger) << "on_request_chunk_header_cb";
+    // SYLAR_LOG_DEBUG(g_logger) << "on_request_chunk_header_cb";
     return 0;
 }
 
@@ -131,7 +131,7 @@ static int on_request_chunk_header_cb(http_parser *p)
  */
 static int on_request_chunk_complete_cb(http_parser *p) 
 {
-    SYLAR_LOG_DEBUG(g_logger) << "on_request_chunk_complete_cb";
+    // SYLAR_LOG_DEBUG(g_logger) << "on_request_chunk_complete_cb";
     return 0;
 }
 
@@ -140,7 +140,7 @@ static int on_request_chunk_complete_cb(http_parser *p)
  */
 static int on_request_url_cb(http_parser* p, const char* buf, size_t len)
 {
-    SYLAR_LOG_DEBUG(g_logger) << " on_request_url_cb";
+    // SYLAR_LOG_DEBUG(g_logger) << " on_request_url_cb";
     // 定义返回值
     int rt;
     // 定义url解析结构体
@@ -181,7 +181,7 @@ static int on_request_url_cb(http_parser* p, const char* buf, size_t len)
  */
 static int on_request_header_field_cb(http_parser* p, const char* buf, size_t len)
 {
-    SYLAR_LOG_DEBUG(g_logger) << "on_request_header_field_cb";
+    // SYLAR_LOG_DEBUG(g_logger) << "on_request_header_field_cb";
     std::string field(buf, len);
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(p->data);
     parser->setField(field);
@@ -193,7 +193,7 @@ static int on_request_header_field_cb(http_parser* p, const char* buf, size_t le
  */
 static int on_request_header_value_cb(http_parser* p, const char* buf, size_t len)
 {
-    SYLAR_LOG_DEBUG(g_logger) << "on_request_header_value_cb";
+    // SYLAR_LOG_DEBUG(g_logger) << "on_request_header_value_cb";
     std::string value(buf, len);
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(p->data);
     parser->getHttpRequest()->setHeader(parser->getField(), value);
@@ -205,7 +205,7 @@ static int on_request_header_value_cb(http_parser* p, const char* buf, size_t le
  */
 static int on_request_status_cb(http_parser *p, const char *buf, size_t len) 
 {
-    SYLAR_LOG_DEBUG(g_logger) << "on_request_status_cb, should not happen";
+    // SYLAR_LOG_DEBUG(g_logger) << "on_request_status_cb, should not happen";
     return 0;
 }
 
@@ -215,7 +215,7 @@ static int on_request_status_cb(http_parser *p, const char *buf, size_t len)
  */
 static int on_request_body_cb(http_parser* p, const char* buf, size_t len)
 {
-    SYLAR_LOG_DEBUG(g_logger) << "on_request_body_cb";
+    // SYLAR_LOG_DEBUG(g_logger) << "on_request_body_cb";
     std::string body(buf,len);
     HttpRequestParser* parser = static_cast<HttpRequestParser*>(p->data);
     parser->getHttpRequest()->appendBody(body);

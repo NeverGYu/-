@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_fiber"
-  "../bin/test_fiber.pdb"
+  "../bin/exe/test_fiber"
+  "../bin/exe/test_fiber.pdb"
   "CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o"
   "CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o.d"
 )

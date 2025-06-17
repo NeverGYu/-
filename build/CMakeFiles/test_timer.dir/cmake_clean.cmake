@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_timer"
-  "../bin/test_timer.pdb"
+  "../bin/exe/test_timer"
+  "../bin/exe/test_timer.pdb"
   "CMakeFiles/test_timer.dir/test/test_timer.cpp.o"
   "CMakeFiles/test_timer.dir/test/test_timer.cpp.o.d"
 )

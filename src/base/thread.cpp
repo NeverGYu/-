@@ -60,6 +60,24 @@ void Thread::join()
 }
 
 /**
+ *  @brief 设置分离线程
+ */
+void Thread::detach()
+{
+    if (m_thread)
+    {
+        int rt = pthread_detach(m_thread);
+        if (rt)
+        {
+            SYLAR_LOG_ERROR(g_logger) << "pthread detach thread fail, rt=" << rt << " name=" << m_name;
+            throw std::logic_error("pthread join error");
+        }
+        m_thread = 0;
+    }
+    
+}
+
+/**
  *  @brief 返回当前线程名称
  */
 Thread* Thread::GetThis()

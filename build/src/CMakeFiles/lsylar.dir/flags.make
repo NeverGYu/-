@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/g++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/gch/sylar/include/base -I/home/gch/sylar/include/http/http-parser -I/home/gch/sylar/include/http/base -I/home/gch/sylar/include/stream
+C_INCLUDES = -I/home/gch/sylar/include/base -I/home/gch/sylar/include/http/http-parser -I/home/gch/sylar/include/http/base -I/home/gch/sylar/include/http/session -I/home/gch/sylar/include/middleware -I/home/gch/sylar/include/middleware/cors -I/home/gch/sylar/include/stream -I/home/gch/sylar/include/db -I/home/gch/sylar/include/ssl
 
 C_FLAGS = -g -fPIC
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gch/sylar/include/base -I/home/gch/sylar/include/http/http-parser -I/home/gch/sylar/include/http/base -I/home/gch/sylar/include/stream
+CXX_INCLUDES = -I/home/gch/sylar/include/base -I/home/gch/sylar/include/http/http-parser -I/home/gch/sylar/include/http/base -I/home/gch/sylar/include/http/session -I/home/gch/sylar/include/middleware -I/home/gch/sylar/include/middleware/cors -I/home/gch/sylar/include/stream -I/home/gch/sylar/include/db -I/home/gch/sylar/include/ssl
 
 CXX_FLAGS =  -g -rdynamic -fPIC -g -fPIC -std=gnu++20
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_iomanager"
-  "../bin/test_iomanager.pdb"
+  "../bin/exe/test_iomanager"
+  "../bin/exe/test_iomanager.pdb"
   "CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.o"
   "CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.o.d"
 )

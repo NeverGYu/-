@@ -87,6 +87,9 @@
         "csignal": "cpp",
         "cfenv": "cpp",
         "charconv": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "regex": "cpp",
+        "*.inc": "cpp",
+        "queue": "cpp"
     }
 }

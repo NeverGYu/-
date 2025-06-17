@@ -610,6 +610,54 @@ base/util.cpp.s:
 	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/base/util.cpp.s
 .PHONY : base/util.cpp.s
 
+db/db_connection.o: db/db_connection.cpp.o
+.PHONY : db/db_connection.o
+
+# target to build an object file
+db/db_connection.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/db/db_connection.cpp.o
+.PHONY : db/db_connection.cpp.o
+
+db/db_connection.i: db/db_connection.cpp.i
+.PHONY : db/db_connection.i
+
+# target to preprocess a source file
+db/db_connection.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/db/db_connection.cpp.i
+.PHONY : db/db_connection.cpp.i
+
+db/db_connection.s: db/db_connection.cpp.s
+.PHONY : db/db_connection.s
+
+# target to generate assembly for a file
+db/db_connection.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/db/db_connection.cpp.s
+.PHONY : db/db_connection.cpp.s
+
+db/db_pool.o: db/db_pool.cpp.o
+.PHONY : db/db_pool.o
+
+# target to build an object file
+db/db_pool.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/db/db_pool.cpp.o
+.PHONY : db/db_pool.cpp.o
+
+db/db_pool.i: db/db_pool.cpp.i
+.PHONY : db/db_pool.i
+
+# target to preprocess a source file
+db/db_pool.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/db/db_pool.cpp.i
+.PHONY : db/db_pool.cpp.i
+
+db/db_pool.s: db/db_pool.cpp.s
+.PHONY : db/db_pool.s
+
+# target to generate assembly for a file
+db/db_pool.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/db/db_pool.cpp.s
+.PHONY : db/db_pool.cpp.s
+
 http/http.o: http/http.cpp.o
 .PHONY : http/http.o
 
@@ -778,6 +826,150 @@ http/http_session.cpp.s:
 	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/http_session.cpp.s
 .PHONY : http/http_session.cpp.s
 
+http/session.o: http/session.cpp.o
+.PHONY : http/session.o
+
+# target to build an object file
+http/session.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session.cpp.o
+.PHONY : http/session.cpp.o
+
+http/session.i: http/session.cpp.i
+.PHONY : http/session.i
+
+# target to preprocess a source file
+http/session.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session.cpp.i
+.PHONY : http/session.cpp.i
+
+http/session.s: http/session.cpp.s
+.PHONY : http/session.s
+
+# target to generate assembly for a file
+http/session.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session.cpp.s
+.PHONY : http/session.cpp.s
+
+http/session_manager.o: http/session_manager.cpp.o
+.PHONY : http/session_manager.o
+
+# target to build an object file
+http/session_manager.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session_manager.cpp.o
+.PHONY : http/session_manager.cpp.o
+
+http/session_manager.i: http/session_manager.cpp.i
+.PHONY : http/session_manager.i
+
+# target to preprocess a source file
+http/session_manager.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session_manager.cpp.i
+.PHONY : http/session_manager.cpp.i
+
+http/session_manager.s: http/session_manager.cpp.s
+.PHONY : http/session_manager.s
+
+# target to generate assembly for a file
+http/session_manager.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session_manager.cpp.s
+.PHONY : http/session_manager.cpp.s
+
+http/session_storage.o: http/session_storage.cpp.o
+.PHONY : http/session_storage.o
+
+# target to build an object file
+http/session_storage.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session_storage.cpp.o
+.PHONY : http/session_storage.cpp.o
+
+http/session_storage.i: http/session_storage.cpp.i
+.PHONY : http/session_storage.i
+
+# target to preprocess a source file
+http/session_storage.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session_storage.cpp.i
+.PHONY : http/session_storage.cpp.i
+
+http/session_storage.s: http/session_storage.cpp.s
+.PHONY : http/session_storage.s
+
+# target to generate assembly for a file
+http/session_storage.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/http/session_storage.cpp.s
+.PHONY : http/session_storage.cpp.s
+
+middleware/CorsMiddleware.o: middleware/CorsMiddleware.cpp.o
+.PHONY : middleware/CorsMiddleware.o
+
+# target to build an object file
+middleware/CorsMiddleware.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/middleware/CorsMiddleware.cpp.o
+.PHONY : middleware/CorsMiddleware.cpp.o
+
+middleware/CorsMiddleware.i: middleware/CorsMiddleware.cpp.i
+.PHONY : middleware/CorsMiddleware.i
+
+# target to preprocess a source file
+middleware/CorsMiddleware.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/middleware/CorsMiddleware.cpp.i
+.PHONY : middleware/CorsMiddleware.cpp.i
+
+middleware/CorsMiddleware.s: middleware/CorsMiddleware.cpp.s
+.PHONY : middleware/CorsMiddleware.s
+
+# target to generate assembly for a file
+middleware/CorsMiddleware.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/middleware/CorsMiddleware.cpp.s
+.PHONY : middleware/CorsMiddleware.cpp.s
+
+middleware/middleware.o: middleware/middleware.cpp.o
+.PHONY : middleware/middleware.o
+
+# target to build an object file
+middleware/middleware.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/middleware/middleware.cpp.o
+.PHONY : middleware/middleware.cpp.o
+
+middleware/middleware.i: middleware/middleware.cpp.i
+.PHONY : middleware/middleware.i
+
+# target to preprocess a source file
+middleware/middleware.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/middleware/middleware.cpp.i
+.PHONY : middleware/middleware.cpp.i
+
+middleware/middleware.s: middleware/middleware.cpp.s
+.PHONY : middleware/middleware.s
+
+# target to generate assembly for a file
+middleware/middleware.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/middleware/middleware.cpp.s
+.PHONY : middleware/middleware.cpp.s
+
+ssl/ssl_context.o: ssl/ssl_context.cpp.o
+.PHONY : ssl/ssl_context.o
+
+# target to build an object file
+ssl/ssl_context.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/ssl/ssl_context.cpp.o
+.PHONY : ssl/ssl_context.cpp.o
+
+ssl/ssl_context.i: ssl/ssl_context.cpp.i
+.PHONY : ssl/ssl_context.i
+
+# target to preprocess a source file
+ssl/ssl_context.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/ssl/ssl_context.cpp.i
+.PHONY : ssl/ssl_context.cpp.i
+
+ssl/ssl_context.s: ssl/ssl_context.cpp.s
+.PHONY : ssl/ssl_context.s
+
+# target to generate assembly for a file
+ssl/ssl_context.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/ssl/ssl_context.cpp.s
+.PHONY : ssl/ssl_context.cpp.s
+
 stream/socket_stream.o: stream/socket_stream.cpp.o
 .PHONY : stream/socket_stream.o
 
@@ -801,6 +993,30 @@ stream/socket_stream.s: stream/socket_stream.cpp.s
 stream/socket_stream.cpp.s:
 	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/stream/socket_stream.cpp.s
 .PHONY : stream/socket_stream.cpp.s
+
+stream/sslsocket_stream.o: stream/sslsocket_stream.cpp.o
+.PHONY : stream/sslsocket_stream.o
+
+# target to build an object file
+stream/sslsocket_stream.cpp.o:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/stream/sslsocket_stream.cpp.o
+.PHONY : stream/sslsocket_stream.cpp.o
+
+stream/sslsocket_stream.i: stream/sslsocket_stream.cpp.i
+.PHONY : stream/sslsocket_stream.i
+
+# target to preprocess a source file
+stream/sslsocket_stream.cpp.i:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/stream/sslsocket_stream.cpp.i
+.PHONY : stream/sslsocket_stream.cpp.i
+
+stream/sslsocket_stream.s: stream/sslsocket_stream.cpp.s
+.PHONY : stream/sslsocket_stream.s
+
+# target to generate assembly for a file
+stream/sslsocket_stream.cpp.s:
+	cd /home/gch/sylar/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lsylar.dir/build.make src/CMakeFiles/lsylar.dir/stream/sslsocket_stream.cpp.s
+.PHONY : stream/sslsocket_stream.cpp.s
 
 # Help Target
 help:
@@ -871,6 +1087,12 @@ help:
 	@echo "... base/util.o"
 	@echo "... base/util.i"
 	@echo "... base/util.s"
+	@echo "... db/db_connection.o"
+	@echo "... db/db_connection.i"
+	@echo "... db/db_connection.s"
+	@echo "... db/db_pool.o"
+	@echo "... db/db_pool.i"
+	@echo "... db/db_pool.s"
 	@echo "... http/http.o"
 	@echo "... http/http.i"
 	@echo "... http/http.s"
@@ -892,9 +1114,30 @@ help:
 	@echo "... http/http_session.o"
 	@echo "... http/http_session.i"
 	@echo "... http/http_session.s"
+	@echo "... http/session.o"
+	@echo "... http/session.i"
+	@echo "... http/session.s"
+	@echo "... http/session_manager.o"
+	@echo "... http/session_manager.i"
+	@echo "... http/session_manager.s"
+	@echo "... http/session_storage.o"
+	@echo "... http/session_storage.i"
+	@echo "... http/session_storage.s"
+	@echo "... middleware/CorsMiddleware.o"
+	@echo "... middleware/CorsMiddleware.i"
+	@echo "... middleware/CorsMiddleware.s"
+	@echo "... middleware/middleware.o"
+	@echo "... middleware/middleware.i"
+	@echo "... middleware/middleware.s"
+	@echo "... ssl/ssl_context.o"
+	@echo "... ssl/ssl_context.i"
+	@echo "... ssl/ssl_context.s"
 	@echo "... stream/socket_stream.o"
 	@echo "... stream/socket_stream.i"
 	@echo "... stream/socket_stream.s"
+	@echo "... stream/sslsocket_stream.o"
+	@echo "... stream/sslsocket_stream.i"
+	@echo "... stream/sslsocket_stream.s"
 .PHONY : help
 
 

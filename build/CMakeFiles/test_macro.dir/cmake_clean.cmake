@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_macro"
-  "../bin/test_macro.pdb"
+  "../bin/exe/test_macro"
+  "../bin/exe/test_macro.pdb"
   "CMakeFiles/test_macro.dir/test/test_macro.cpp.o"
   "CMakeFiles/test_macro.dir/test/test_macro.cpp.o.d"
 )

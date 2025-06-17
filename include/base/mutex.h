@@ -104,7 +104,7 @@ public:
      * @param[in] mutex 读写锁
      */
     ReadScopedLockImpl(T& mutex)
-        :m_mutex(mutex) {
+        : m_mutex(mutex) {
         m_mutex.rdlock();
         m_locked = true;
     }

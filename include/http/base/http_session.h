@@ -9,7 +9,7 @@ namespace http{
 /**
  *  @brief HttpSession用来封装进行accept的socket 
  */
-class HttpSession : public SocketStream
+class HttpSession
 {
 public:
     using ptr = std::shared_ptr<HttpSession>;
@@ -17,7 +17,8 @@ public:
     /**
      *  @brief 构造函数 
      */
-    HttpSession(Socket::ptr sock, bool owner = true);
+    HttpSession(SocketStream::ptr stream, bool owner = true);
+
 
     /**
      *  @brief 用来接收Http请求 
@@ -32,6 +33,14 @@ public:
      *          <0 Socket异常
      */
     int sendResponse(HttpResponse::ptr rsp);
+
+    /**
+     *  @brief 关闭套接字 
+     */
+    void close();
+    
+private:
+    SocketStream::ptr m_stream;
 };
 
 }

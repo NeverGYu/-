@@ -111,4 +111,5 @@ public:
      */
     virtual void close() = 0;
 };
+
 }

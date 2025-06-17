@@ -378,4 +378,5 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: \
  /home/gch/sylar/include/base/util.h /usr/include/c++/11/cxxabi.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
  /home/gch/sylar/include/base/singleton.h \
+ /home/gch/sylar/include/base/../middleware/cors/CorsConfig.h \
  /home/gch/sylar/include/base/env.h

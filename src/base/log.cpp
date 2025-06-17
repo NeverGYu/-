@@ -128,7 +128,6 @@ void Logger::log(LogEvent::ptr event)
             i->log(event);
         }
     }
-    
 }
 
 std::string Logger::toYamlString() {
@@ -615,9 +614,7 @@ LoggerManager::LoggerManager()
  * @todo 实现从配置文件加载日志配置
  */
 void LoggerManager::init() 
-{
-    
-}
+{}
 
 std::string LoggerManager::toYamlString()
 {

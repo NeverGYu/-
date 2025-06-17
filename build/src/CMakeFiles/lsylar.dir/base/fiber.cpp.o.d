@@ -383,5 +383,6 @@ src/CMakeFiles/lsylar.dir/base/fiber.cpp.o: \
  /usr/local/include/yaml-cpp/node/emit.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
+ /home/gch/sylar/include/base/../middleware/cors/CorsConfig.h \
  /home/gch/sylar/include/base/macro.h /usr/include/assert.h \
  /home/gch/sylar/include/base/scheduler.h

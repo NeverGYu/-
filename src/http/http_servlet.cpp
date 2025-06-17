@@ -4,6 +4,8 @@
 namespace sylar{
 namespace http{
 
+
+/*--------------------------------------------------  FunctionServlet  ------------------------------------------------------*/
 FunctionServlet::FunctionServlet(callback cb)
     : Servlet("FunctionServlet")
     , m_cb(cb)
@@ -14,6 +16,52 @@ int32_t FunctionServlet::handle(HttpRequest::ptr req, HttpResponse::ptr rsp, Htt
     return m_cb(req, rsp, session);
 }
 
+
+/*--------------------------------------------------  RouteServlet  ------------------------------------------------------*/
+void ServletDispatch::addRoute(HttpMethod method, const std::string &path, FunctionServlet::ptr servlet)
+{
+    RWMutexType::WriteLock lock(m_mutex);
+    RouteKey key{method, path};
+    m_routes[key] = servlet;
+}
+
+void ServletDispatch::addRouteCallback(HttpMethod method, const std::string &path, FunctionServlet::callback callback)
+{
+    RWMutexType::WriteLock lock(m_mutex);
+    RouteKey key{method, path};
+    m_routecbs[key] = callback;
+}
+
+void ServletDispatch::addRegexRoute(HttpMethod method, const std::string &path, FunctionServlet::ptr servlet)
+{
+    RWMutexType::WriteLock lock(m_mutex);
+    std::regex pathRegex = convertToRegex(path);
+    m_regexs.emplace_back(method,  pathRegex, servlet);
+}   
+
+void ServletDispatch::addRegexRouteCallback(HttpMethod method, const std::string &path, FunctionServlet::callback callback)
+{
+    RWMutexType::WriteLock lock(m_mutex);
+    std::regex pathRegex = convertToRegex(path);
+    m_regexcbs.emplace_back(method,  pathRegex, callback);
+}
+
+std::regex ServletDispatch::convertToRegex(const std::string &path)
+{
+    std::string regexPattern = "^" + std::regex_replace(path, std::regex(R"(/:([^/]+))"), R"(/([^/]+))") + "$";
+    return std::regex(regexPattern);
+}
+
+void ServletDispatch::extractPathParameters(const std::smatch &match, HttpRequest::ptr req)
+{
+    for (size_t i = 0; i < match.size(); ++i)
+    {
+        req->setParam("param" + std::to_string(i), match[i].str());
+    }
+}
+
+
+/*--------------------------------------------------  ServletDispatch  ------------------------------------------------------*/
 ServletDispatch::ServletDispatch()
     : Servlet("ServletDispatch")
 {
@@ -22,7 +70,13 @@ ServletDispatch::ServletDispatch()
 
 int32_t ServletDispatch::handle(HttpRequest::ptr req, HttpResponse::ptr rsp, HttpSession::ptr session)
 {
-    auto slt = getMatchedServlet(req->getPath());
+    auto slt = getMatchedRoute(req);
+    // 这说明没有注册对应的Route
+    if (!slt)
+    {
+        slt = getMatchedServlet(req->getPath());
+    }
+    // 执行请求注册好的Servlet
     if (slt)
     {
         slt->handle(req, rsp, session);
@@ -118,6 +172,53 @@ Servlet::ptr ServletDispatch::getMatchedServlet(const std::string& url)
     return m_default;
 }
 
+Servlet::ptr ServletDispatch::getMatchedRoute(HttpRequest::ptr req) 
+{
+    RWMutexType::ReadLock lock(m_mutex);
+    std::string path = req->getPath();
+ 
+    // 1. 精确路由匹配（方法+路径）
+    RouteKey key{req->getMethod(), path};
+    auto rit = m_routes.find(key); 
+    if (rit != m_routes.end()) 
+    {
+        return rit->second;
+    }
+ 
+    // 2. 精确路由回调（方法+路径）
+    auto rcit = m_routecbs.find(key); 
+    if (rcit != m_routecbs.end()) 
+    {
+        return std::make_shared<FunctionServlet>(rcit->second);
+    }
+ 
+    // 3. 动态路由匹配（正则+方法）
+    for (const auto& route : m_regexs) 
+    {
+        std::smatch match;
+        if (route.method  == req->getMethod() && std::regex_match(path, match, route.regex))  
+        {
+            extractPathParameters(match, req);
+            return route.servlet; 
+        }
+    }
+ 
+    // 4. 动态路由回调（正则+方法）
+    for (const auto& route : m_regexcbs)
+    {
+        std::smatch match;
+        if (route.method  == req->getMethod() && std::regex_match(path, match, route.regex))  
+        {
+            extractPathParameters(match, req);
+            return std::make_shared<FunctionServlet>(route.cb); 
+        }
+    }
+ 
+    return nullptr;
+}
+
+
+/*--------------------------------------------------  NotFoundDispatch  ------------------------------------------------------*/
 NotFoundServlet::NotFoundServlet(const std::string& name)
     : Servlet("NotFoundServlet")
     , m_name(name) 

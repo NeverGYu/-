@@ -405,4 +405,5 @@ src/CMakeFiles/lsylar.dir/base/tcp_server.cpp.o: \
  /usr/local/include/yaml-cpp/node/parse.h \
  /usr/local/include/yaml-cpp/node/emit.h \
  /usr/include/c++/11/unordered_set \
- /usr/include/c++/11/bits/unordered_set.h
+ /usr/include/c++/11/bits/unordered_set.h \
+ /home/gch/sylar/include/base/../middleware/cors/CorsConfig.h

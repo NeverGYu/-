@@ -273,6 +273,19 @@ test_http_server/fast:
 .PHONY : test_http_server/fast
 
 #=============================================================================
+# Target rules for targets named test_http_servlet
+
+# Build rule for target.
+test_http_servlet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_http_servlet
+.PHONY : test_http_servlet
+
+# fast build rule for target.
+test_http_servlet/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_servlet.dir/build.make CMakeFiles/test_http_servlet.dir/build
+.PHONY : test_http_servlet/fast
+
+#=============================================================================
 # Target rules for targets named test_iomanager
 
 # Build rule for target.
@@ -310,6 +323,19 @@ test_macro: cmake_check_build_system
 test_macro/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_macro.dir/build.make CMakeFiles/test_macro.dir/build
 .PHONY : test_macro/fast
+
+#=============================================================================
+# Target rules for targets named test_middleware
+
+# Build rule for target.
+test_middleware: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_middleware
+.PHONY : test_middleware
+
+# fast build rule for target.
+test_middleware/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_middleware.dir/build.make CMakeFiles/test_middleware.dir/build
+.PHONY : test_middleware/fast
 
 #=============================================================================
 # Target rules for targets named test_schedule
@@ -362,6 +388,19 @@ test_socket_tcp_server: cmake_check_build_system
 test_socket_tcp_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket_tcp_server.dir/build.make CMakeFiles/test_socket_tcp_server.dir/build
 .PHONY : test_socket_tcp_server/fast
+
+#=============================================================================
+# Target rules for targets named test_ssl
+
+# Build rule for target.
+test_ssl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ssl
+.PHONY : test_ssl
+
+# fast build rule for target.
+test_ssl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ssl.dir/build.make CMakeFiles/test_ssl.dir/build
+.PHONY : test_ssl/fast
 
 #=============================================================================
 # Target rules for targets named test_tcp_server
@@ -703,6 +742,30 @@ test/test_http_server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/test/test_http_server.cpp.s
 .PHONY : test/test_http_server.cpp.s
 
+test/test_http_servlet.o: test/test_http_servlet.cpp.o
+.PHONY : test/test_http_servlet.o
+
+# target to build an object file
+test/test_http_servlet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_servlet.dir/build.make CMakeFiles/test_http_servlet.dir/test/test_http_servlet.cpp.o
+.PHONY : test/test_http_servlet.cpp.o
+
+test/test_http_servlet.i: test/test_http_servlet.cpp.i
+.PHONY : test/test_http_servlet.i
+
+# target to preprocess a source file
+test/test_http_servlet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_servlet.dir/build.make CMakeFiles/test_http_servlet.dir/test/test_http_servlet.cpp.i
+.PHONY : test/test_http_servlet.cpp.i
+
+test/test_http_servlet.s: test/test_http_servlet.cpp.s
+.PHONY : test/test_http_servlet.s
+
+# target to generate assembly for a file
+test/test_http_servlet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_servlet.dir/build.make CMakeFiles/test_http_servlet.dir/test/test_http_servlet.cpp.s
+.PHONY : test/test_http_servlet.cpp.s
+
 test/test_iomanager.o: test/test_iomanager.cpp.o
 .PHONY : test/test_iomanager.o
 
@@ -774,6 +837,30 @@ test/test_macro.s: test/test_macro.cpp.s
 test/test_macro.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_macro.dir/build.make CMakeFiles/test_macro.dir/test/test_macro.cpp.s
 .PHONY : test/test_macro.cpp.s
+
+test/test_middleware.o: test/test_middleware.cpp.o
+.PHONY : test/test_middleware.o
+
+# target to build an object file
+test/test_middleware.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_middleware.dir/build.make CMakeFiles/test_middleware.dir/test/test_middleware.cpp.o
+.PHONY : test/test_middleware.cpp.o
+
+test/test_middleware.i: test/test_middleware.cpp.i
+.PHONY : test/test_middleware.i
+
+# target to preprocess a source file
+test/test_middleware.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_middleware.dir/build.make CMakeFiles/test_middleware.dir/test/test_middleware.cpp.i
+.PHONY : test/test_middleware.cpp.i
+
+test/test_middleware.s: test/test_middleware.cpp.s
+.PHONY : test/test_middleware.s
+
+# target to generate assembly for a file
+test/test_middleware.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_middleware.dir/build.make CMakeFiles/test_middleware.dir/test/test_middleware.cpp.s
+.PHONY : test/test_middleware.cpp.s
 
 test/test_schedule.o: test/test_schedule.cpp.o
 .PHONY : test/test_schedule.o
@@ -871,6 +958,30 @@ test/test_socket_tcp_server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket_tcp_server.dir/build.make CMakeFiles/test_socket_tcp_server.dir/test/test_socket_tcp_server.cpp.s
 .PHONY : test/test_socket_tcp_server.cpp.s
 
+test/test_ssl.o: test/test_ssl.cpp.o
+.PHONY : test/test_ssl.o
+
+# target to build an object file
+test/test_ssl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ssl.dir/build.make CMakeFiles/test_ssl.dir/test/test_ssl.cpp.o
+.PHONY : test/test_ssl.cpp.o
+
+test/test_ssl.i: test/test_ssl.cpp.i
+.PHONY : test/test_ssl.i
+
+# target to preprocess a source file
+test/test_ssl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ssl.dir/build.make CMakeFiles/test_ssl.dir/test/test_ssl.cpp.i
+.PHONY : test/test_ssl.cpp.i
+
+test/test_ssl.s: test/test_ssl.cpp.s
+.PHONY : test/test_ssl.s
+
+# target to generate assembly for a file
+test/test_ssl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ssl.dir/build.make CMakeFiles/test_ssl.dir/test/test_ssl.cpp.s
+.PHONY : test/test_ssl.cpp.s
+
 test/test_tcp_server.o: test/test_tcp_server.cpp.o
 .PHONY : test/test_tcp_server.o
 
@@ -964,13 +1075,16 @@ help:
 	@echo "... test_http_connection"
 	@echo "... test_http_parser"
 	@echo "... test_http_server"
+	@echo "... test_http_servlet"
 	@echo "... test_iomanager"
 	@echo "... test_log"
 	@echo "... test_macro"
+	@echo "... test_middleware"
 	@echo "... test_schedule"
 	@echo "... test_socket"
 	@echo "... test_socket_tcp_client"
 	@echo "... test_socket_tcp_server"
+	@echo "... test_ssl"
 	@echo "... test_tcp_server"
 	@echo "... test_thread"
 	@echo "... test_timer"
@@ -1010,6 +1124,9 @@ help:
 	@echo "... test/test_http_server.o"
 	@echo "... test/test_http_server.i"
 	@echo "... test/test_http_server.s"
+	@echo "... test/test_http_servlet.o"
+	@echo "... test/test_http_servlet.i"
+	@echo "... test/test_http_servlet.s"
 	@echo "... test/test_iomanager.o"
 	@echo "... test/test_iomanager.i"
 	@echo "... test/test_iomanager.s"
@@ -1019,6 +1136,9 @@ help:
 	@echo "... test/test_macro.o"
 	@echo "... test/test_macro.i"
 	@echo "... test/test_macro.s"
+	@echo "... test/test_middleware.o"
+	@echo "... test/test_middleware.i"
+	@echo "... test/test_middleware.s"
 	@echo "... test/test_schedule.o"
 	@echo "... test/test_schedule.i"
 	@echo "... test/test_schedule.s"
@@ -1031,6 +1151,9 @@ help:
 	@echo "... test/test_socket_tcp_server.o"
 	@echo "... test/test_socket_tcp_server.i"
 	@echo "... test/test_socket_tcp_server.s"
+	@echo "... test/test_ssl.o"
+	@echo "... test/test_ssl.i"
+	@echo "... test/test_ssl.s"
 	@echo "... test/test_tcp_server.o"
 	@echo "... test/test_tcp_server.i"
 	@echo "... test/test_tcp_server.s"

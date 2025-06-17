@@ -411,6 +411,7 @@ src/CMakeFiles/lsylar.dir/base/hook.cpp.o: \
  /usr/include/c++/11/cxxabi.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
  /home/gch/sylar/include/base/singleton.h \
+ /home/gch/sylar/include/base/../middleware/cors/CorsConfig.h \
  /home/gch/sylar/include/base/fiber.h /usr/include/ucontext.h \
  /usr/include/x86_64-linux-gnu/bits/indirect-return.h \
  /usr/include/x86_64-linux-gnu/sys/ucontext.h \

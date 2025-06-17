@@ -208,12 +208,38 @@ src/CMakeFiles/lsylar.dir/http/http_servlet.cpp.o: \
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/gch/sylar/include/http/base/http.h \
- /home/gch/sylar/include/http/base/../http-parser/http_parser_template.h \
+ /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/regex \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
+ /usr/include/c++/11/bits/ranges_util.h \
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/11/bitset /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/stack \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
- /usr/include/c++/11/bits/stl_multimap.h \
+ /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/11/bits/regex_constants.h \
+ /usr/include/c++/11/bits/regex_error.h \
+ /usr/include/c++/11/bits/regex_automaton.h \
+ /usr/include/c++/11/bits/regex_automaton.tcc \
+ /usr/include/c++/11/bits/regex_scanner.h \
+ /usr/include/c++/11/bits/regex_scanner.tcc \
+ /usr/include/c++/11/bits/regex_compiler.h \
+ /usr/include/c++/11/bits/regex_compiler.tcc \
+ /usr/include/c++/11/bits/regex.h /usr/include/c++/11/bits/regex.tcc \
+ /usr/include/c++/11/bits/regex_executor.h \
+ /usr/include/c++/11/bits/regex_executor.tcc \
+ /home/gch/sylar/include/http/base/http.h \
+ /home/gch/sylar/include/http/base/../http-parser/http_parser_template.h \
  /usr/local/include/boost/lexical_cast.hpp \
  /usr/local/include/boost/config.hpp \
  /usr/local/include/boost/config/user.hpp \
@@ -234,9 +260,7 @@ src/CMakeFiles/lsylar.dir/http/http_servlet.cpp.o: \
  /usr/local/include/boost/throw_exception.hpp \
  /usr/local/include/boost/exception/exception.hpp \
  /usr/local/include/boost/assert/source_location.hpp \
- /usr/local/include/boost/cstdint.hpp /usr/include/c++/11/cstring \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/c++/11/source_location \
+ /usr/local/include/boost/cstdint.hpp /usr/include/c++/11/source_location \
  /usr/local/include/boost/config/workaround.hpp \
  /usr/local/include/boost/lexical_cast/try_lexical_convert.hpp \
  /usr/local/include/boost/type_traits/conditional.hpp \
@@ -298,15 +322,7 @@ src/CMakeFiles/lsylar.dir/http/http_servlet.cpp.o: \
  /usr/local/include/boost/move/detail/std_ns_end.hpp \
  /usr/local/include/boost/lexical_cast/detail/converter_lexical_streams.hpp \
  /usr/local/include/boost/type_traits/is_pointer.hpp \
- /usr/local/include/boost/core/snprintf.hpp /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
- /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
- /usr/include/c++/11/bits/locale_facets_nonio.tcc \
- /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/istream /usr/include/c++/11/bits/istream.tcc \
- /usr/include/c++/11/bits/sstream.tcc \
+ /usr/local/include/boost/core/snprintf.hpp \
  /usr/local/include/boost/lexical_cast/detail/lcast_char_constants.hpp \
  /usr/local/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp \
  /usr/local/include/boost/core/noncopyable.hpp \

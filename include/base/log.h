@@ -199,6 +199,7 @@ class LogAppender
 public:
     using ptr = std::shared_ptr<LogAppender>;
     using MutexType = Spinlock;
+    
     LogAppender(LogFormatter::ptr formatter);
     ~LogAppender() {}
 

@@ -90,7 +90,8 @@ public:
     Address::ptr getLocalAddress();
     std::string getRemoteAddressString();
     std::string getLocalAddressString();
-private:
+
+protected:
     Socket::ptr m_socket;   // socket
     bool m_owner;           // 是否是该socket的控制着
 };

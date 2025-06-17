@@ -44,6 +44,14 @@ public:
     void join();
 
     /**
+     *  @brief 设置分离线程 
+     */
+    void detach();
+    
+    /**
+     *  @brief 让线程在后台运行   
+     */
+    /**
      *  @brief 返回当前线程名称
      */
     static Thread* GetThis();

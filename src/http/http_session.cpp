@@ -4,13 +4,16 @@
 namespace sylar{
 namespace http{
 
-HttpSession::HttpSession(Socket::ptr sock, bool owner)
-    : SocketStream(sock, owner)
+static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+
+
+HttpSession::HttpSession(SocketStream::ptr stream, bool owner)
+    : m_stream(stream)
 {}
 
 HttpRequest::ptr HttpSession::recvRequest() 
 {
-    // 定义Http解析器
+    // 定义HttpRequest解析器
     HttpRequestParser::ptr parser(new HttpRequestParser);
     // 获得最大可解析的长度
     uint64_t buff_size = HttpRequestParser::GetHttpRequestBufferSize();
@@ -24,13 +27,15 @@ HttpRequest::ptr HttpSession::recvRequest()
     do
     {
         // read函数的调用过程: 此处的read -> SocketStream的read -> Socket的recv -> 此处的Socket是accept返回的socket -> 用来接受对方发送的请求
-        int len = read(data + offset, buff_size - offset);
+        int len = m_stream->read(data + offset, buff_size - offset);
         // 如果没有读取到数据就关闭连接
         if (len <= 0)
         {
-            close();
+            m_stream->close();
             return nullptr;
         }
+        SYLAR_LOG_DEBUG(g_logger) << "read bytes: " << len;
+        SYLAR_LOG_DEBUG(g_logger) << "raw data: " << std::string(data, len);
         // 此处代表读取到了数据
         len += offset;
         // 调用解析器来进行解析: nparse表示解析了的长度
@@ -38,15 +43,15 @@ HttpRequest::ptr HttpSession::recvRequest()
         // 判断解析结果
         if (parser->hasError())
         {
-            close();
+            m_stream->close();
             return nullptr;
         }
-        // 此时的offset代表已经解析了的数据长度
+        // 此时的offset 表示未解析的长度
         offset = len - nparse;
         // 这表示解析长度超过了最大解析长度
         if (offset == (int)buff_size)
         {
-            close();
+            m_stream->close();
             return nullptr;
         }
         // 这表示解析终止
@@ -64,10 +69,13 @@ int HttpSession::sendResponse(HttpResponse::ptr rsp)
     std::stringstream ss;
     ss << *rsp;
     std::string data = ss.str();
-    return writeFixSize(data.c_str(), data.size());
+    return m_stream->writeFixSize(data.c_str(), data.size());
 }
 
-
+void HttpSession::close()
+{
+    m_stream->close();
+}
 
 }
 }

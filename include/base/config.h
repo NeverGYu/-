@@ -16,6 +16,7 @@
 #include "mutex.h"
 #include "log.h"
 #include "util.h"
+#include "../middleware/cors/CorsConfig.h"
 
 namespace sylar
 {
@@ -336,6 +337,64 @@ public:
     }
 };
 
+/**
+ * @brief 类型转换模板类偏特化(YAML String 转换成 http::middleware::CorsConfig)
+ */
+template<>
+class lexicalCast<std::string, sylar::middleware::CorsConfig>
+{
+public:
+    sylar::middleware::CorsConfig operator()(const std::string& val)
+    {
+        // 先将字符串转换成YAML::Node
+        YAML::Node node = YAML::Load(val);
+        // 定义需要的类型middle::CorsConfig
+        sylar::middleware::CorsConfig config;
+        // 进行转化
+        if (node["allowedOrigins"])
+        {
+            config.allowedOrigins = node["allowedOrigins"].as<std::vector<std::string>>();
+        }
+        if (node["allowedMethods"])
+        {
+            config.allowedMethods = node["allowedMethods"].as<std::vector<std::string>>();
+        }
+        if (node["allowedHeaders"])
+        {
+            config.allowedHeaders = node["allowedHeaders"].as<std::vector<std::string>>();
+        }
+        if (node["allowCredentials"])
+        {
+            config.allowCredentials = node["allowCredentials"].as<bool>();
+        }
+        if (node["maxAge"])
+        {
+            config.maxAge = node["maxAge"].as<int>();
+        }
+        return config;
+    }
+};
+
+/**
+ * @brief 类型转换模板类偏特化(http::middleware::CorsConfig 转换成 YAML String)
+ */
+template<>
+class lexicalCast<sylar::middleware::CorsConfig, std::string>
+{
+public:
+    std::string operator()(const sylar::middleware::CorsConfig& config)
+    {
+        YAML::Node node;
+        std::stringstream ss;
+        node["allowedOrigins"] = config.allowedOrigins;
+        node["allowedMethods"] = config.allowedMethods;
+        node["allowedHeaders"] = config.allowedHeaders;
+        node["allowCredentials"] = config.allowCredentials;
+        node["maxAge"] = config.maxAge;
+        ss << node;
+        return ss.str();
+    }
+};
 
 /**
  * @brief 配置的子类

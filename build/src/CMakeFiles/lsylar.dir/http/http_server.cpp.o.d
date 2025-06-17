@@ -371,5 +371,73 @@ src/CMakeFiles/lsylar.dir/http/http_server.cpp.o: \
  /usr/local/include/boost/type_traits/is_reference.hpp \
  /usr/local/include/boost/type_traits/is_lvalue_reference.hpp \
  /usr/local/include/boost/type_traits/is_rvalue_reference.hpp \
+ /home/gch/sylar/include/http/session/session_manager.h \
+ /usr/include/c++/11/random /usr/include/c++/11/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
+ /usr/include/c++/11/bits/random.tcc /usr/include/c++/11/numeric \
+ /usr/include/c++/11/bits/stl_numeric.h \
+ /usr/include/c++/11/pstl/glue_numeric_defs.h \
+ /home/gch/sylar/include/http/session/session.h \
+ /home/gch/sylar/include/http/session/session_storage.h \
  /home/gch/sylar/include/http/base/http_servlet.h \
- /home/gch/sylar/include/base/../base/tcp_server.h
+ /usr/include/c++/11/regex /usr/include/c++/11/algorithm \
+ /usr/include/c++/11/bits/ranges_algo.h \
+ /usr/include/c++/11/bits/ranges_util.h \
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/11/bitset /usr/include/c++/11/stack \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
+ /usr/include/c++/11/bits/regex_constants.h \
+ /usr/include/c++/11/bits/regex_error.h \
+ /usr/include/c++/11/bits/regex_automaton.h \
+ /usr/include/c++/11/bits/regex_automaton.tcc \
+ /usr/include/c++/11/bits/regex_scanner.h \
+ /usr/include/c++/11/bits/regex_scanner.tcc \
+ /usr/include/c++/11/bits/regex_compiler.h \
+ /usr/include/c++/11/bits/regex_compiler.tcc \
+ /usr/include/c++/11/bits/regex.h /usr/include/c++/11/bits/regex.tcc \
+ /usr/include/c++/11/bits/regex_executor.h \
+ /usr/include/c++/11/bits/regex_executor.tcc \
+ /home/gch/sylar/include/base/../base/tcp_server.h \
+ /home/gch/sylar/include/base/../middleware/middleware.h \
+ /home/gch/sylar/include/base/../middleware/cors/CorsMiddleware.h \
+ /home/gch/sylar/include/base/../middleware/cors/CorsConfig.h \
+ /home/gch/sylar/include/base/../ssl/ssl_context.h \
+ /home/gch/sylar/include/base/../ssl/ssl_config.h \
+ /usr/include/openssl/ssl.h /usr/include/openssl/macros.h \
+ /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+ /usr/include/x86_64-linux-gnu/openssl/configuration.h \
+ /usr/include/openssl/opensslv.h /usr/include/openssl/e_os2.h \
+ /usr/include/openssl/comp.h /usr/include/openssl/crypto.h \
+ /usr/include/c++/11/stdlib.h /usr/include/openssl/safestack.h \
+ /usr/include/openssl/stack.h /usr/include/openssl/types.h \
+ /usr/include/openssl/cryptoerr.h /usr/include/openssl/symhacks.h \
+ /usr/include/openssl/cryptoerr_legacy.h /usr/include/openssl/core.h \
+ /usr/include/openssl/comperr.h /usr/include/openssl/bio.h \
+ /usr/include/openssl/bioerr.h /usr/include/openssl/x509.h \
+ /usr/include/openssl/buffer.h /usr/include/openssl/buffererr.h \
+ /usr/include/openssl/evp.h /usr/include/openssl/core_dispatch.h \
+ /usr/include/openssl/evperr.h /usr/include/openssl/params.h \
+ /usr/include/openssl/bn.h /usr/include/openssl/bnerr.h \
+ /usr/include/openssl/objects.h /usr/include/openssl/obj_mac.h \
+ /usr/include/openssl/asn1.h /usr/include/openssl/asn1err.h \
+ /usr/include/openssl/objectserr.h /usr/include/openssl/ec.h \
+ /usr/include/openssl/ecerr.h /usr/include/openssl/rsa.h \
+ /usr/include/openssl/rsaerr.h /usr/include/openssl/dsa.h \
+ /usr/include/openssl/dh.h /usr/include/openssl/dherr.h \
+ /usr/include/openssl/dsaerr.h /usr/include/openssl/sha.h \
+ /usr/include/openssl/x509err.h /usr/include/openssl/x509_vfy.h \
+ /usr/include/openssl/lhash.h /usr/include/openssl/pkcs7.h \
+ /usr/include/openssl/pkcs7err.h /usr/include/openssl/ocsp.h \
+ /usr/include/openssl/http.h /usr/include/openssl/conf.h \
+ /usr/include/openssl/conferr.h /usr/include/openssl/conftypes.h \
+ /usr/include/openssl/x509v3.h /usr/include/openssl/x509v3err.h \
+ /usr/include/openssl/ocsperr.h /usr/include/openssl/pem.h \
+ /usr/include/openssl/pemerr.h /usr/include/openssl/hmac.h \
+ /usr/include/openssl/async.h /usr/include/openssl/asyncerr.h \
+ /usr/include/openssl/ct.h /usr/include/openssl/cterr.h \
+ /usr/include/openssl/sslerr.h /usr/include/openssl/sslerr_legacy.h \
+ /usr/include/openssl/prov_ssl.h /usr/include/openssl/ssl2.h \
+ /usr/include/openssl/ssl3.h /usr/include/openssl/tls1.h \
+ /usr/include/openssl/dtls1.h /usr/include/openssl/srtp.h \
+ /home/gch/sylar/include/base/../stream/sslsocket_stream.hpp

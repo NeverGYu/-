@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/test_daemon"
-  "../bin/test_daemon.pdb"
+  "../bin/exe/test_daemon"
+  "../bin/exe/test_daemon.pdb"
   "CMakeFiles/test_daemon.dir/test/test_daemon.cpp.o"
   "CMakeFiles/test_daemon.dir/test/test_daemon.cpp.o.d"
 )
